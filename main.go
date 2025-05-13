@@ -28,7 +28,7 @@ func main() {
     router := gin.Default()
 
     router.GET("/rtcToken", func(c *gin.Context) {
-        channelName := c.Query("call_channel")
+        channelName := c.Query("channelId")
         uidStr := c.Query("uid")
         uid, _ := strconv.Atoi(uidStr)
         role := rtctokenbuilder.RolePublisher
